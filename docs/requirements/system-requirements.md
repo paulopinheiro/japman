@@ -4,12 +4,12 @@ JAPMan (Java Audio Plugin Manager) aims to assist users in identifying, organizi
 The system shall allow the user to maintain a registry of known plugins and associate these plugins with their respective installations found in the system.
 ## 2. Scope
 The system's main functions will be:
-    • to scan for existing plugin installations on the computer;
-    • to maintain a catalog of found installations;
-    • to allow the user to maintain a plugin registry;
-    • to allow the association between registered plugins and found installations;
-    • to allow searching for available installations and plugins;
-    • to present consolidated catalog information through a dashboard.
+    - to scan for existing plugin installations on the computer;
+    - to maintain a catalog of found installations;
+    - to allow the user to maintain a plugin registry;
+    - to allow the association between registered plugins and found installations;
+    - to allow searching for available installations and plugins;
+    - to present consolidated catalog information through a dashboard.
 The system will initially be developed for use on computers with the Linux operating system.
 ## 3. Fundamental Concepts
 ### 3.1 Plugin
@@ -26,24 +26,24 @@ It will be up to the user to establish the associations between the cataloged in
 ### RF-001 — Search
 The system shall allow the user to search for audio plugins that have cataloged installations on the computer.
 The search shall allow filtering and sorting by different criteria, including at least:
-    • plugin format (LV2, VST, VST3, CLAP, etc.);
-    • installation origin (native or from another operating system via bridge);
-    • name or part of the name;
-    • manufacturer;
-    • installation or update date;
-    • category;
-    • emulation;
-    • version;
-    • tags;
-    • instrument type, when applicable, such as piano, guitar, or synthesizer.
+    - plugin format (LV2, VST, VST3, CLAP, etc.);
+    - installation origin (native or from another operating system via bridge);
+    - name or part of the name;
+    - manufacturer;
+    - installation or update date;
+    - category;
+    - emulation;
+    - version;
+    - tags;
+    - instrument type, when applicable, such as piano, guitar, or synthesizer.
 ### RF-002 — Installation Scan
 The system shall offer a scanning mechanism capable of locating plugin installations on the computer.
 The user shall be able to configure the locations that will be used as starting points for the scan.
 The scan shall identify and collect available information about the installations found.
 At the end of the scan, the system shall report, when applicable:
-    • new installations found;
-    • previously cataloged installations that were not found in the scan;
-    • changes detected in already cataloged installations.
+    - new installations found;
+    - previously cataloged installations that were not found in the scan;
+    - changes detected in already cataloged installations.
 The system shall present the scan results to the user before making changes to the catalog, according to the rules defined for the update process.
 ### RF-003 — Maintenance of the plugin registry
 The system shall offer the user resources to maintain a plugin registry.
@@ -58,12 +58,12 @@ Installations found during a scan that are not yet associated with a plugin shal
 ### RF-005 — Dashboard
 The system shall present a dashboard as the initial screen, containing consolidated information about the catalog.
 The dashboard shall present, at a minimum:
-    • number of installations associated with plugins;
-    • number of installations not yet associated;
-    • distribution of installations by origin;
-    • distribution of installations by manufacturer;
-    • distribution of installations by format;
-    • distribution of installations by category.
+    - number of installations associated with plugins;
+    - number of installations not yet associated;
+    - distribution of installations by origin;
+    - distribution of installations by manufacturer;
+    - distribution of installations by format;
+    - distribution of installations by category.
 ## 5. Non-Functional Requirements
 ### RNF-001 — Local Persistence
 The system shall use an embedded database to store its information.
@@ -85,11 +85,11 @@ The first version of the system will be for the Linux operating system.
 The system will be developed as a desktop application.
 ## 7. Open Questions
 The questions below do not yet constitute requirements or definitive decisions and should be analyzed during development:
-    • Should the result of a scan be applied automatically or will it depend on explicit user confirmation?
-    • How should the identity of an already cataloged installation be determined?
-    • In which situations might the system automatically suggest an association between an installation and a plugin?
-    • How can the user review and correct automatically suggested associations?
-    • How can distinct plugins be optionally grouped by the user for organizational and search purposes?
-    • What criteria should be used to determine that an installation no longer exists?
+    - Should the result of a scan be applied automatically or will it depend on explicit user confirmation?
+    - How should the identity of an already cataloged installation be determined?
+    - In which situations might the system automatically suggest an association between an installation and a plugin?
+    - How can the user review and correct automatically suggested associations?
+    - How can distinct plugins be optionally grouped by the user for organizational and search purposes?
+    - What criteria should be used to determine that an installation no longer exists?
     • What information should be maintained for each plugin format?
     • What performance metrics should be adopted when the expected catalog volume is better defined?
