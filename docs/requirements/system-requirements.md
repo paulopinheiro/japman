@@ -23,7 +23,7 @@ An installation may be associated with one or more plugins, while a plugin may h
 An association relates an installation found on the computer to a plugin registered by the user.
 It will be up to the user to establish the associations between the cataloged installations and the registered plugins.
 ## 4. Functional Requirements
-### RF-001 — Search
+### FR-001 — Search
 The system shall allow the user to search for audio plugins that have cataloged installations on the computer.
 The search shall allow filtering and sorting by different criteria, including at least:
 - plugin format (LV2, VST, VST3, CLAP, etc.);
@@ -36,26 +36,25 @@ The search shall allow filtering and sorting by different criteria, including at
 - version;
 - tags;
 - instrument type, when applicable, such as piano, guitar, or synthesizer.
-### RF-002 — Installation Scan
+### FR-002 — Installation Scan
 The system shall offer a scanning mechanism capable of locating plugin installations on the computer.
-The user shall be able to configure the locations that will be used as starting points for the scan.
 The scan shall identify and collect available information about the installations found.
 At the end of the scan, the system shall report, when applicable:
 - new installations found;
 - previously cataloged installations that were not found in the scan;
 - changes detected in already cataloged installations.
 The system shall present the scan results to the user before making changes to the catalog, according to the rules defined for the update process.
-### RF-003 — Maintenance of the plugin registry
+### FR-003 — Maintenance of the plugin registry
 The system shall offer the user resources to maintain a plugin registry.
 The user shall be able to register a plugin that does not yet exist in the catalog and maintain the information associated with it.
 The information registered by the user shall be preserved during new scans of the installations.
-### RF-004 — Association between plugins and installations
+### FR-004 — Association between plugins and installations
 The system shall allow the user to associate cataloged installations with registered plugins.
 The system shall allow the user to associate an installation with more than one plugin when the nature of the installation so requires.
 The system shall allow a plugin to have multiple installations.
 The system shall allow the user to change or remove existing associations.
 Installations found during a scan that are not yet associated with a plugin shall remain identifiable as unassociated installations.
-### RF-005 — Dashboard
+### FR-005 — Dashboard
 The system shall present a dashboard as the initial screen, containing consolidated information about the catalog.
 The dashboard shall present, at a minimum:
 - number of installations associated with plugins;
@@ -65,18 +64,18 @@ The dashboard shall present, at a minimum:
 - distribution of installations by format;
 - distribution of installations by category.
 ## 5. Non-Functional Requirements
-### RNF-001 — Local Persistence
+### NFR-001 — Local Persistence
 The system shall use an embedded database to store its information.
 The system's operation shall not depend on an external database server.
-### RNF-002 — Interface
+### NFR-002 — Interface
 The system shall offer a modern, clear, and interactive graphical interface, suitable for viewing, searching, and managing catalog information.
 The interface shall use appropriate interaction and visual presentation resources whenever they contribute to the understanding and use of the system.
-### RNF-003 — Dependencies
+### NFR-003 — Dependencies
 The system shall prioritize the use of established and appropriate libraries for obtaining plugin and installation metadata.
-### RNF-004 — Performance
+### NFR-004 — Performance
 Search operations on the local catalog shall have a response time suitable for interactive use of the system.
 Scan operations shall be performed in a way that minimizes their impact on normal computer use.
-### RNF-005 — Extensibility
+### NFR-005 — Extensibility
 The system architecture shall allow the inclusion of new installation discovery mechanisms, plugin formats, and supported platforms without requiring extensive changes to the system core.
 ## 6. Restrictions
 ### RT-001 — Initial Platform
