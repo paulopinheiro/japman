@@ -1,0 +1,32 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+left to right direction
+
+title JAPMan - Use Case Diagram
+
+' --- Actors ---
+actor "Catalog Manager" as manager
+actor "Audio Engineer" as engineer
+
+' --- System Boundary ---
+rectangle "JAPMan" {
+    package "Catalog Management" {
+        usecase "Maintain Plugin Registry" as UC_maintain
+        usecase "Link Installation to Plugin" as UC_link
+        usecase "Synchronize Installation Catalog" as UC_sync
+    }
+
+    package "Query" {
+        usecase "Search Plugins" as UC_search
+    }
+}
+
+' --- Actor Associations ---
+manager --> UC_sync
+manager --> UC_maintain
+manager --> UC_link
+
+engineer --> UC_search
+
+@enduml
