@@ -215,6 +215,18 @@ the installation during the current synchronization operation.
 It does not retrieve plugin information from the persistent Plugin
 Catalog.
 
+### BR-11 — Plugin Version Discovery
+
+During synchronization, the system must retrieve the version
+of each discovered plugin whenever this information is
+available through the respective plugin format or its metadata.
+
+The plugin version is an attribute of the Plugin, not of the
+Installation.
+
+If version information is not available, the system must
+leave the version unspecified.
+
 ## User Interface Considerations
 
 - The plugin format selection should allow the user to select any
